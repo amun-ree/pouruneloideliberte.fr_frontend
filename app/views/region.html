@@ -1,0 +1,65 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="column" style="margin-top: 3%;">
+        <div class="page-title animated fadeInUp">Cliquez maintenant sur votre département...</div>
+      <div class="the-underline animated fadeInUp hide-phone">
+        <div class="underlines underline-1"></div>
+        <img src="images/underline.svg" alt="" class="underline-img"/>
+        <div class="underlines underline-2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row hide-phone">
+
+    <img src="images/p-deps.png" class="persons-deps-image"/>
+
+
+
+    <div class="the-map-departements">
+      <a class="arrow-to-back" ng-href="#/france"><img src="images/arrow.svg"/></a>
+
+      <div class="departements-map-text">
+        <p id="region" style="text-transform:uppercase;">{{region_name}}</p>
+        <div id="departement-txt" style="display:none;">
+        <p id="the_departement" style="text-transform:uppercase;"></p>
+        <p style="font-weight:normal;"><span id="nb-habitant" ></span> habitants</p>
+        <p style="font-weight: normal;"><span>Préfecture : <span id="prefecture" ></span></span></p>
+
+        <div class="departement_text" >
+          <p style="font-size:15px;"><span id="nb-ader" ></span> adhérents</p>
+          <p style="font-size:15px;"> Délégué(e) : <span id="nom-deleg" ></span> </p>
+        </div>
+      </div>
+        </div>
+        <div class="map-shadow animated fadeIn">
+      <img src="{{shadow_url}}" class="departement-shadow-image"/>
+</div>
+      <div class="mapcontainer animated fadeIn">
+        <div class="map animated fadeIn" id="region-map"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row show-phone">
+<div class="phone-region-title text-center f-os">
+  region: <span style="font-weight:bold;">{{region.name}}</span>
+</div>
+
+<ul class="list-phone-region">
+  <li ng-repeat="departement in departements track by $index"  ng-click="goMobile(departement.svg_code)">
+    <div class="left-info">
+      <a  class="f-os" >{{departement.name}}</a>
+      <p style="font-weight:normal;"><span id="nb-habitant" >{{departement.nb_residents | number}}</span> habitants</p>
+      <p style="font-weight: normal;"><span>Préfecture : <span id="prefecture" >{{departement.main_city}}</span></span></p>
+      <p style="font-size:15px;"><span id="nb-ader" >{{departement.nb_admd}}</span> adhérents</p>
+      <p style="font-size:15px;"> Délégué(e) : <span id="nom-deleg" >{{departement.delegate[0].first_name}}</span> </p>
+
+    </div>
+  <img class="arrow-list-region" src="images/arrow-right.png">
+  </li>
+</ul>
+
+
+  </div>
+</div>

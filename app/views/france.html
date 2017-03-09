@@ -1,0 +1,42 @@
+<div class=" wrapper">
+  <div class="row">
+    <div class="column" style="margin-top: 3%;">
+        <div class="page-title animated fadeInUp">Votre député(e) sera (probablement !) candidat(e) à sa réélection.
+        </br>Pour l’interpeller, cliquez d’abord sur votre région...</div>
+      <div class="the-underline animated fadeInUp hide-phone">
+        <div class="underlines underline-1"></div>
+        <img src="images/underline.svg" alt="" class="underline-img"/>
+        <div class="underlines underline-2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row hide-phone">
+
+
+    <img src="images/p-regions.png" class="persons-resgions-image"/>
+
+
+    <div class="the-map">
+      <p id="the_region" class="the-region "></p>
+      <img src="images/france_regions_shadow.svg" class="france-shadow-image animated fadeIn"/>
+
+      <div class="mapcontainer ">
+        <div class="map  animated fadeIn" id="france-map"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="show-phone">
+    <ul class="list-phone">
+      <li ng-repeat="region in regions track by $index"  ng-click="goMobile(region.id)">
+        <div class="left-info">
+      <a  class="f-os" >{{region.name}}</a>
+    </div>
+      <img class="arrow-list" src="images/arrow-right.png">
+      </li>
+    </ul>
+  </div>
+
+  <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</div>

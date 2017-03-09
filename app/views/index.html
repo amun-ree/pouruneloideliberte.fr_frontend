@@ -1,0 +1,151 @@
+<!doctype html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+  <head>
+    <meta charset="utf-8">
+
+<meta property="og:image" content="http://pouruneloideliberte.fr/images/bg-home.jpg" />
+    <title></title>
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!--<link rel="stylesheet" href="styles/animsition.css">-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/skeleton.css">
+    <link rel="stylesheet" href="styles/custom.css">
+
+
+
+    <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+  </head>
+  <body class="{{wrapperlayout}}" ng-app="admdFrontendApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="wrapper">
+    <div class="header">
+
+
+        <nav class="navbar" >
+          <a ng-href="#/">
+          <div class="navbar-left pull-left">
+            <div  class="title f-os">POUR<span class="f-bluelight">UNE</span>LOI<span class="f-bluelight">DE</span>LIBERTÉ</div>
+            <div class="sub-title">Ensemble, mettons de la dignité au cœur de la campagne électorale</div>
+
+          </div>
+        </a>
+          <div class="navbar-right pull-right">
+            <img src="images/admd_logo.png" class="admd-logo pull-right"/>
+
+          </div>
+
+        </nav>
+
+    </div>
+
+    <div class="container">
+    <div ng-view="" class="full-height"></div>
+    </div>
+
+</div>
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+    <script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js"></script>
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'zho1ecj',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+    <!-- build:js(app) scripts/vendor.js -->
+
+    <script charset="utf-8" src="js/jquery.mapael.js"></script>
+    <script charset="utf-8" src="js/script.js"></script>
+
+    <!-- bower:js -->
+    <script src="bower_components/angular-responsive/src/responsive-directive.js"></script>
+    <script src="bower_components/psResponsive/ps-responsive.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+
+
+
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-load/angular-load.js"></script>
+        <script src="bower_components/angular-utf8-base64/angular-utf8-base64.min.js"></script>
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/index.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/france.js"></script>
+        <script src="scripts/controllers/departement.js"></script>
+        <script src="scripts/controllers/circonscription.js"></script>
+        <script src="scripts/controllers/deputy.js"></script>
+        <script src="scripts/controllers/lettre.js"></script>
+        <script src="scripts/controllers/end.js"></script>
+        <script src="scripts/controllers/enddeputy.js"></script>
+
+        <script src="scripts/services/regions.js"></script>
+        <script src="scripts/controllers/region.js"></script>
+        <script src="scripts/controllers/formdeputy.js"></script>
+        <script src="scripts/services/region.js"></script>
+        <script src="scripts/services/departements.js"></script>
+        <script src="scripts/filters/getbysvgcode.js"></script>
+        <script src="scripts/services/departementbycode.js"></script>
+        <script src="scripts/filters/underscore.js"></script>
+        <script src="scripts/services/deputy.js"></script>
+        <script src="scripts/services/departement.js"></script>
+        <script src="scripts/services/deputylaws.js"></script>
+        <script src="scripts/services/opinion.js"></script>
+        <script src="scripts/services/sendmail.js"></script>
+        <script src="scripts/services/sendmailback.js"></script>
+
+        <script src="scripts/services/sendmailnumber.js"></script>
+
+
+        <!-- endbuild -->
+</body>
+</html>

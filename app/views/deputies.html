@@ -1,0 +1,73 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="column" style="margin-top: 3%;">
+        <div class="page-title animated fadeInUp">Pour interpeller votre député(e), écrivez-lui !</div>
+      <div class="the-underline animated fadeInUp hide-phone">
+        <div class="underlines underline-1"></div>
+        <img src="images/underline.svg" alt="" class="underline-img"/>
+        <div class="underlines underline-2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row hide-phone">
+
+    <img src="images/p-laws.png" class="persons-deputies-image"/>
+
+    <div class="deputy-info animated fadeIn">
+      <div class="deupty-departement">
+        <p ng-if="circonscription.order != 1" class="deupty-departement-text"><span style="text-transform:uppercase;">{{departement.name}}</span> / {{circonscription.order}}<sup>e</sup> circonscription</p>
+        <p ng-if="circonscription.order == 1" class="deupty-departement-text"><span style="text-transform:uppercase;">{{departement.name}}</span> / {{circonscription.order}}<sup>ère</sup> circonscription</p>
+
+        <p class="deupty-departement-name f-b">député(e) sortant(e) : <span class="text-transform:capitalise;">{{deputy.first_name}} {{deputy.last_name}}</span></p>
+
+
+      </div>
+
+
+
+      <div class="deputy-laws animated fadeIn">
+        <p class="law-ex-title text-bold">Ses positions les plus récentes:</p>
+        <div ng-repeat="law in laws track by $index" class="deputy-info-text-section fade">
+          <p class="law-title">{{law.name}}</p>
+          <p class="law-text">{{law.description}}</p>
+          <span class="deputy-info-text-span text-bold text-{{opinion_colors[law.opinion_id]}}" style="text-transform:uppercase"> {{law.opinion.opinion}} </span>
+
+        </div>
+        <button class="deputy-info-button animated fadeInDown" ng-click='go()'>ÉCRIRE À VOTRE DÉPUTÉ(E)</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="row show-phone">
+
+<div class="phone-container">
+    <div class="deputy-info animated fadeIn">
+      <div class="deupty-departement">
+        <p ng-if="circonscription.order != 1" class="deupty-departement-text"><span style="text-transform:uppercase;">{{departement.name}}</span> / {{circonscription.order}}<sup>e</sup> circonscription</p>
+        <p ng-if="circonscription.order == 1" class="deupty-departement-text"><span style="text-transform:uppercase;">{{departement.name}}</span> / {{circonscription.order}}<sup>ère</sup> circonscription</p>
+
+        <p class="deupty-departement-name f-b">député(e) sortant(e) : <span class="text-transform:capitalise;">{{deputy.first_name}} {{deputy.last_name}}</span></p>
+
+
+      </div>
+
+
+
+      <div class="deputy-laws animated fadeIn">
+        <p class="law-ex-title text-bold">Ses positions les plus récentes:</p>
+        <div ng-repeat="law in laws track by $index" class="deputy-info-text-section fade">
+          <p class="law-title">{{law.name}}</p>
+          <p class="law-text">{{law.description}}</p>
+          <span class="deputy-info-text-span text-bold text-{{opinion_colors[law.opinion_id]}}" style="text-transform:uppercase"> {{law.opinion.opinion}} </span>
+
+        </div>
+        <button class="deputy-info-button animated fadeInDown center-block" ng-click='go()'>ÉCRIRE À VOTRE DÉPUTÉ(E)</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>

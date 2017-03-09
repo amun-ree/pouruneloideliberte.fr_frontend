@@ -1,0 +1,21 @@
+{
+  "name": "psResponsive",
+  "version": "0.0.3",
+  "main": [
+    "ps-responsive.js"
+  ],
+  "dependencies": {
+    "angular": ">= 1.0.8"
+  },
+  "homepage": "https://github.com/randallmeeker/psResponsive",
+  "_release": "0.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.3",
+    "commit": "5eadcf3f90881705b8c2dc2ac6f2581213a2a2ce"
+  },
+  "_source": "https://github.com/randallmeeker/psResponsive.git",
+  "_target": "^0.0.3",
+  "_originalSource": "ps-responsive",
+  "_direct": true
+}

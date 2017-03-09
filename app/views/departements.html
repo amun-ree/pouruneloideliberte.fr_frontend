@@ -1,0 +1,98 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="column" style="margin-top: 3%;">
+        <div class="page-title animated fadeInUp">Cliquez à présent sur votre circonscription !</div>
+      <div class="the-underline animated fadeInUp hide-phone">
+        <div class="underlines underline-1"></div>
+        <img src="images/underline.svg" alt="" class="underline-img"/>
+        <div class="underlines underline-2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row hide-phone">
+
+    <img src="images/p-circs.png" class="persons-circs-image"/>
+
+
+    <div class="the-map-circs">
+
+      <a class="arrow-to-back arrow-to-back-circ" ng-click="goToRegion(encoded_region_id)" ><img src="images/arrow.svg"/></a>
+
+      <div class="circonscription-map-text fade">
+        <p style="text-transform:uppercase;" class="fade">{{departement.name}}</p>
+        <p style="font-weight: normal;"><span>{{nb_res}} habitants</span></p>
+        <p style="font-weight: normal;"><span>Préfecture : {{departement.main_city}}</span></p>
+
+        <div class="departement_text">
+          <p style="font-size:14px;">{{nb_ad}} adhérents ADMD</p>
+              <a ng-if="(departement.delegate_id != null) && (paris == false)" class="mailto" href="mailto:{{delegate.email}}"><p style="font-size:14px;" ><i class="glyphicon glyphicon-envelope message" style="font-size:14px;"></i>Contact délégué(e) : {{delegate.first_name}}</p></a>
+              <a ng-if="(departement.delegate_id == null) && (paris == false)" class="mailto" ><p style="font-size:14px;" ><i class="glyphicon glyphicon-envelope message" style="font-size:14px;"></i>Contact délégué(e) : en attente de nomination</p></a>
+              <div ng-if="(paris == true)" class="paris">
+                <p   style="font-size:14px;margin-top:10px;" ><i class="glyphicon glyphicon-envelope message" style="font-size:14px;"></i>Contact délégué(e) : </p>
+                <select name="repeatSelect" id="delegateparis" ng-model="selected_delegate">
+      <option ng-repeat="parisdelegate in parisdelegates track by $index" value="{{parisdelegate.email}}">  <p  class="mailto" style="font-size:14px;" >Paris {{$index+1}} - {{parisdelegate.name}}</p></option>
+
+                </select>
+                <a class='mailto' href="mailto:{{selected_delegate}}"  style="font-size:14px;">Envoyer un email au délégué</a>
+              </div>
+
+
+        </div>
+        <p ng-mouseover="changeColor(circ.order) " ng-mouseleave="RechangeColor(circ.order)" class="re-Circonscription re-Circonscription-{{circ.order}} fade" ng-repeat="circ in circonscriptions track by $index">
+
+          <span class="circ-name">{{circ.order}}<sup ng-if="circ.order == 1">ère</sup><sup ng-if="circ.order != 1">e</sup> circonscription</span><br/>
+          <span class="deputy-name" ng-click="goTo(circ.deputy[0].id)">{{circ.deputy[0].first_name}} {{circ.deputy[0].last_name}} député(e) sortant(e)</span>
+
+        </p>
+
+      </div>
+      <img src="{{shadow_url}}" class="circonscription-shadow-image animated fadeIn"/>
+
+      <div class="circ-mapcontainer">
+        <div class="map " id="circonscription-map"></div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="row show-phone">
+<div class="phone-region-title text-center f-os">
+  departement: <span style="font-weight:bold;">{{departement.name}}</span>
+</div>
+<div class="phone-deparetment-text text-center">
+  <p style="font-weight: normal;text-align:center;"><span>{{nb_res}} habitants</span></p>
+  <p style="font-weight: normal;text-align:center;"><span>Préfecture : {{departement.main_city}}</span></p>
+  <p style="font-size:14px;text-align:center;margin-bottom:20px;">{{nb_ad}} adhérents ADMD</p>
+      <a ng-if="(departement.delegate_id != null) && (paris == false)" class="mailto" href="mailto:{{delegate.email}}"><p style="font-size:20px;text-align:center;" ><i class="glyphicon glyphicon-envelope message" style="font-size:14px;"></i>Contact délégué(e) : {{delegate.first_name}}</p></a>
+      <a ng-if="(departement.delegate_id == null) && (paris == false)" class="mailto" ><p style="font-size:20px;text-align:center;" ><i class="glyphicon glyphicon-envelope message" style="font-size:14px;"></i>Contact délégué(e) : en attente de nomination</p></a>
+      <div ng-if="(paris == true)" class="paris" style="text-align:center;">
+        <p   style="font-size:14px;margin-top:10px;text-align:center;" ><i class="glyphicon glyphicon-envelope message" style="font-size:14px;"></i>Contact délégué(e) : </p>
+        <select name="repeatSelect" id="delegateparis" ng-model="selected_delegate">
+<option ng-repeat="parisdelegate in parisdelegates track by $index" value="{{parisdelegate.email}}">  <p  class="mailto" style="font-size:14px;" >Paris {{$index+1}} - {{parisdelegate.name}}</p></option>
+
+        </select>
+      <br/>  <a class='mailto' style="font-size:20px;margin-top:30px;margin-bottom:30px;text-align:center;" href="mailto:{{selected_delegate}}"  style="font-size:20px;">Envoyer un email au délégué</a>
+      </div>
+
+
+
+</div>
+
+<ul class="list-phone-departement">
+  <li ng-repeat="circonscription in circonscriptions track by $index"  ng-click="goTo(circonscription.deputy[0].id)">
+    <div class="left-info">
+      <span class="circ-name">{{circonscription.order}}<sup ng-if="circonscription.order == 1">ère</sup><sup ng-if="circonscription.order != 1">e</sup> circonscription</span><br/>
+      <span class="deputy-name">{{circonscription.deputy[0].first_name}} {{circonscription.deputy[0].last_name}} député(e) sortant(e)</span>
+
+
+    </div>
+  <img class="arrow-list-departement" src="images/arrow-right.png">
+  </li>
+</ul>
+
+
+  </div>
+
+
+</div>

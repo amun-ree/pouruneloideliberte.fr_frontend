@@ -1,0 +1,36 @@
+<div class="lg-container">
+  <div class="row">
+    <div class="column" style="margin-top: 5%">
+      <div class="bg-column-form padding-bottom-35 animated fadeIn">
+        <div class="form-group">
+        <p>{{prefix}},<br/>
+          est temps de choisir les conditions de notre propre fin de vie. J’ai besoin de connaître votre position et de la faire connaitre aux électeurs. Je compte sur votre réponse sur un sujet connu de tous et sur lequel un futur législateur se doit d’avoir une position claire.
+ <br/>
+ Bien à vous,
+         </p>
+       </div>
+        <form name="DeputyForm">
+          <div class="form-group">
+     <label>L’euthanasie active (administration d’un produit létal par un tiers): </label><br/>
+     <input type="radio" name="law1" ng-model="formData.law1" value="1"> Pour <br/>
+     <input type="radio" name="law1" ng-model="formData.law1" value="0"> Contre <br/>
+     <input type="radio" name="law1" ng-model="formData.law1" value="2"> Sans opinion <br/>
+</div>
+
+
+<div class="form-group">
+<label>Le suicide assisté (auto-administration d’un produit létal): </label><br/>
+<input type="radio" name="law2" ng-model="formData.law2" value="1"> Pour <br/>
+<input type="radio" name="law2" ng-model="formData.law2"  value="0"> Contre <br/>
+<input type="radio" name="law2" ng-model="formData.law2" value="2"> Sans opinion <br/>
+</div>
+
+<div class="form-group">
+  <button class="form-btn"  ng-click='go()'>ENVOYER</button>
+
+</div>
+   </form>
+      </div>
+    </div>
+  </div>
+</div>
