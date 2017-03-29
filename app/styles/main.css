@@ -105,3 +105,305 @@ body {
     border-bottom: 0;
   }
 }
+
+/* POPUP Id Meneo */
+body.main-wrapper {
+		background-attachment: fixed!important;
+	}
+	 
+.ui-dialog button.ui-dialog-titlebar-close {
+	background: rgba(255,255,255,0.8);
+	width: 30px !important;
+	height: 30px !important;
+	padding: 5px !important;
+	line-height: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #0a1e3d;
+	text-align: center;
+	display: block;
+	float: right;
+	margin-right: -30px;
+	border: solid 2px #0a1e3d;
+	border-radius: 100%;
+}
+ 
+/* Panneau #1 */
+#step1 {
+	background: rgba(255,255,255,0.8);
+	padding: 20px;
+}
+#interpellation {
+	color: #0a1e3d;
+	font-size: 30px;
+	text-align: center;
+	padding: 30px 15px;
+	display: block;
+	font-weight: bold;
+	background: white;
+}
+.btn-big-skyblue {
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	background: #0a1e3f;
+	color: white;
+	font-weight: bold;
+	font-size: 30px;
+	padding: 10px 0 ;
+	width: 100%;
+	outline: 0;
+}
+.btn-big-skyblue: active, .btn-big-skyblue:focus {
+	outline: 0;
+}
+.btn-big-skyblue:hover {
+	background: #d0021b;
+	color: white;
+}
+/* Step 2 */
+#step2 {
+	background: rgba(255,255,255,0.8);
+	padding: 5px;
+	float: left;
+}
+#step2 strong {
+	padding: 10px;
+	font-size: 30px;
+	line-height: 36px;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	color: #0a1e3f;
+}
+.image_candidat {
+	display: block;
+	float: left;
+	width: 25%;
+	height: auto;
+}
+.marge {
+	position: relative;
+	margin: 5px;
+	float: left;
+}
+.change .marge:before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #65a2ff;
+	opacity: 0.5;
+	transition-duration: 300ms;
+	display: block;
+}
+.change .marge:hover::before {
+	opacity: 0;
+}
+.image_candidat img { 
+	width: 100%;
+	height: auto; 
+	float: left;
+}
+.retour {
+	position: absolute;
+	right: 20px;
+	font-size: 60px;
+	top: 0;
+	line-height: 60px;
+	color: white;
+	cursor: pointer;
+}
+/* Onglet Candidat */
+#bhamon .candidat_image {
+	background-image: url(../images/bhamon_bleu.jpg);
+}
+#ppoutou .candidat_image {
+	background-image: url(../images/ppoutou_bleu.jpg);
+}
+#ffillon .candidat_image {
+	background-image: url(../images/ffillon_bleu.jpg);
+}
+#ndupont-aignan .candidat_image {
+	background-image: url(../images/ndupont-aignan_bleu.jpg);
+}
+#narthaud .candidat_image {
+	background-image: url(../images/narthaud_bleu.jpg);
+}
+#jlmelenchon .candidat_image {
+	background-image: url(../images/jlmelenchon_bleu.jpg);
+}
+#mlepen .candidat_image {
+	background-image: url(../images/mlepen_bleu.jpg);
+}
+#ajardin .candidat_image {
+	background-image: url(../images/ajardin_bleu.jpg);
+}
+#emacron .candidat_image {
+	background-image: url(../images/emacron_bleu.jpg);
+}
+#cheminade .candidat_image {
+	background-image: url(../images/cheminade_bleu.jpg);
+}
+#lassalle .candidat_image {
+	background-image: url(../images/lassalle_bleu.jpg);
+} 
+#asselineau .candidat_image {
+	background-image: url(../images/asselineau_bleu.jpg);
+}
+.candidat_inner {
+	 position: relative; 
+	width: 600px; 
+	margin: auto;
+}
+.candidat_image { 
+	background-size: 100% auto;
+	width: 600px;
+	height: 600px;
+}
+.notation {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+.note_verte {
+	display: block; 
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	border-radius: 100%;
+	background: green;
+}
+.note_blanche {
+	display: block; 
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	border-radius: 100%;
+	background: white;
+}
+.nom_candidat {
+	display: block;
+	text-align: center;
+	font-size: 42px;
+	text-transform: uppercase;
+	color: white;
+	padding: 140px 0 0 0;
+	line-height: 40px;
+}
+.parti_candidat {
+	text-align: center;
+	display: block;
+	color: white;
+	font-size: 30px;
+}
+.avis_candidat {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+	display: block;
+	text-align: center;
+	font-size: 60px;
+	margin: 20px 0;
+	line-height: 60px;
+}
+.infos_candidat > a   {
+	display: block;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	line-height: 24px;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.liens_candidat {
+	background: rgba(240, 248, 255,0.8);
+	padding: 20px;
+}
+.liens_candidat a {
+	text-align: center;
+	display: inline-block;
+	padding: 20px 32px;
+	background: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 28px;
+	color: #0a1e3d;
+	line-height: 36px;
+	transition-duration: 300ms;
+}
+.liens_candidat a:hover {
+	background: #d0021b;
+	color: white;
+}
+.liens_candidat a:first-child {
+	margin-right: 20px;
+}
+/* Encart final */
+#merci_inner {
+	background: white;
+	padding: 20px;
+	text-align:center;
+}
+#merci .main-title {
+	font-size: 24px;
+}
+@media (max-width:600px) {
+	#interpellation, .btn-big-skyblue { 
+		font-size: 28px; 
+	}
+	#step2 strong {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.image_candidat { 
+		width: 100%;
+	}
+	.candidat_inner {
+		width: 300px;
+	}
+	.candidat_image {
+		width: 300px;
+		height: 300px;
+	}
+	.note_verte, .note_verte { 
+		width: 15px;
+		height: 15px;
+	}
+	 
+	.nom_candidat {  
+		font-size: 24px; 
+		padding: 40px 0 0 0;
+		line-height: 30px;
+	}
+	.parti_candidat { 
+		font-size: 18px;
+	}
+	.avis_candidat { 
+		font-size: 30px;
+		margin: 10px 0;
+	}
+	.infos_candidat > a   { 
+		line-height: 18px;
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	.liens_candidat { 
+		padding: 10px;
+	}
+	.liens_candidat a { 
+		padding: 10px 0; 
+		font-size: 16px; 
+		width: 100%;
+	} 
+	.liens_candidat a:first-child {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+}
+/* // popup */
