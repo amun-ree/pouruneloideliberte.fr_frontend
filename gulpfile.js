@@ -192,9 +192,12 @@ gulp.task('copy:fonts', function () {
   return gulp.src(yeoman.app + '/fonts/**/*')
     .pipe(gulp.dest(yeoman.dist + '/fonts'));
 });
-
+gulp.task('copy:docs', function () {
+  return gulp.src(yeoman.app + '/docs/**/*')
+    .pipe(gulp.dest(yeoman.dist + '/docs'));
+});
 gulp.task('build', ['clean:dist'], function () {
-  runSequence(['images', 'copy:extras', 'copy:fonts', 'client:build']);
+  runSequence(['images', 'copy:extras', 'copy:fonts','copy:docs', 'client:build']);
 });
 
 gulp.task('default', ['build']);
