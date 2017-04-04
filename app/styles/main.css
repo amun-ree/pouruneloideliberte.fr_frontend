@@ -286,6 +286,15 @@ body.main-wrapper {
 	border-radius: 100%;
 	background: white;
 }
+.note_rouge {
+	display: block; 
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	border-radius: 100%;
+	background: red;
+}
 .nom_candidat {
 	display: block;
 	text-align: center;
@@ -370,7 +379,7 @@ body.main-wrapper {
 		width: 300px;
 		height: 300px;
 	}
-	.note_verte, .note_verte { 
+	.note_verte, .note_blanche, .note_rouge { 
 		width: 15px;
 		height: 15px;
 	}
