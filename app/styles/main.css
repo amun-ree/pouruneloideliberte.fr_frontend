@@ -110,7 +110,7 @@ body {
 body.main-wrapper {
 		background-attachment: fixed!important;
 	}
-	 
+
 .ui-dialog button.ui-dialog-titlebar-close {
 	background: rgba(255,255,255,0.8);
 	width: 30px !important;
@@ -127,7 +127,7 @@ body.main-wrapper {
 	border: solid 2px #0a1e3d;
 	border-radius: 100%;
 }
- 
+
 /* Panneau #1 */
 #step1 {
 	background: rgba(255,255,255,0.8);
@@ -202,9 +202,9 @@ body.main-wrapper {
 .change .marge:hover::before {
 	opacity: 0;
 }
-.image_candidat img { 
+.image_candidat img {
 	width: 100%;
-	height: auto; 
+	height: auto;
 	float: left;
 }
 .retour {
@@ -249,16 +249,16 @@ body.main-wrapper {
 }
 #lassalle .candidat_image {
 	background-image: url(../images/lassalle_bleu.jpg);
-} 
+}
 #asselineau .candidat_image {
 	background-image: url(../images/asselineau_bleu.jpg);
 }
 .candidat_inner {
-	 position: relative; 
-	width: 600px; 
+	 position: relative;
+	width: 600px;
 	margin: auto;
 }
-.candidat_image { 
+.candidat_image {
 	background-size: 100% auto;
 	width: 600px;
 	height: 600px;
@@ -269,7 +269,7 @@ body.main-wrapper {
 	left: 15px;
 }
 .note_verte {
-	display: block; 
+	display: block;
 	float: left;
 	width: 30px;
 	height: 30px;
@@ -278,13 +278,22 @@ body.main-wrapper {
 	background: green;
 }
 .note_blanche {
-	display: block; 
+	display: block;
 	float: left;
 	width: 30px;
 	height: 30px;
 	margin-right: 10px;
 	border-radius: 100%;
 	background: white;
+}
+.note_rouge {
+	display: block;
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	border-radius: 100%;
+	background: red;
 }
 .nom_candidat {
 	display: block;
@@ -353,14 +362,14 @@ body.main-wrapper {
 	font-size: 24px;
 }
 @media (max-width:600px) {
-	#interpellation, .btn-big-skyblue { 
-		font-size: 28px; 
+	#interpellation, .btn-big-skyblue {
+		font-size: 28px;
 	}
 	#step2 strong {
 		font-size: 20px;
 		line-height: 24px;
 	}
-	.image_candidat { 
+	.image_candidat {
 		width: 100%;
 	}
 	.candidat_inner {
@@ -370,36 +379,36 @@ body.main-wrapper {
 		width: 300px;
 		height: 300px;
 	}
-	.note_verte, .note_verte { 
+	.note_verte, .note_blanche, .note_rouge {
 		width: 15px;
 		height: 15px;
 	}
-	 
-	.nom_candidat {  
-		font-size: 24px; 
+
+	.nom_candidat {
+		font-size: 24px;
 		padding: 40px 0 0 0;
 		line-height: 30px;
 	}
-	.parti_candidat { 
+	.parti_candidat {
 		font-size: 18px;
 	}
-	.avis_candidat { 
+	.avis_candidat {
 		font-size: 30px;
 		margin: 10px 0;
 	}
-	.infos_candidat > a   { 
+	.infos_candidat > a   {
 		line-height: 18px;
 		font-size: 14px;
 		margin-bottom: 10px;
 	}
-	.liens_candidat { 
+	.liens_candidat {
 		padding: 10px;
 	}
-	.liens_candidat a { 
-		padding: 10px 0; 
-		font-size: 16px; 
+	.liens_candidat a {
+		padding: 10px 0;
+		font-size: 16px;
 		width: 100%;
-	} 
+	}
 	.liens_candidat a:first-child {
 		margin-right: 0;
 		margin-bottom: 10px;
@@ -407,3 +416,36 @@ body.main-wrapper {
 
 }
 /* // popup */
+
+
+/**
+ * DepartementView -
+ * departement.html
+ * Candidats
+ */
+.candidat-title{
+  color: #d0021b;
+    font-size: 0.75em !important;
+}
+.candidat-list{
+  list-style: none;
+    font-size: 0.75em;
+    font-weight: 600;
+    color: #d0021b;
+}
+.candidat-list li{
+margin-bottom: 0.75rem;
+}
+ul.candidat-list li:first-of-type{
+margin-top: 0.75rem;
+}
+.candidat-name{
+  cursor: pointer;
+      color: #d0021b;
+      text-decoration: none;
+}
+.candidat-name:hover{
+  text-decoration: underline;
+  color: #d0021b;
+
+}

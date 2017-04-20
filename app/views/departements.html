@@ -38,12 +38,26 @@
 
 
         </div>
-        <p ng-mouseover="changeColor(circ.order) " ng-mouseleave="RechangeColor(circ.order)" class="re-Circonscription re-Circonscription-{{circ.order}} fade" ng-repeat="circ in circonscriptions track by $index">
+        <div ng-repeat="circ in circonscriptions track by $index">
+          <p ng-mouseover="changeColor(circ.order) " ng-mouseleave="RechangeColor(circ.order)" class="re-Circonscription re-Circonscription-{{circ.order}} fade" >
 
-          <span class="circ-name">{{circ.order}}<sup ng-if="circ.order == 1">ère</sup><sup ng-if="circ.order != 1">e</sup> circonscription</span><br/>
-          <span class="deputy-name" ng-click="goTo(circ.deputy[0].id)">{{circ.deputy[0].first_name}} {{circ.deputy[0].last_name}} député(e) sortant(e)</span>
+            <span class="circ-name">{{circ.order}}<sup ng-if="circ.order == 1">ère</sup><sup ng-if="circ.order != 1">e</sup> circonscription</span><br/>
+            <span class="deputy-name" ng-click="goTo(circ.deputy[0].id)">{{circ.deputy[0].first_name}} {{circ.deputy[0].last_name}} député(e) sortant(e)</span>
 
-        </p>
+
+          </p>
+          <span class="candidat-title" ng-show="circ.candidat != 0">Interpeller les candidats:</span><br/>
+          <ul class="candidat-list">
+            <li ng-repeat="candidat in circ.candidat"><a class="candidat-name" href="mailto:{{candidat.email_address}}?subject=POUR UNE LOI DE LIBERT&eacute; : #Admd2017&Body={{candidat.prefix[0].slug}},%0D%0A%0D%0A
+
+  Je soutiens la revendication de l’Association pour le Droit de Mourir dans la Dignit&eacute; (ADMD) en faveur de la l&eacute;galisation de l’aide active &agrave; mourir.%0D%0A%0D%0A
+
+  Bien  &agrave; vous,
+  &cc=pouruneloideliberte@admd.net">{{candidat.first_name}} {{candidat.last_name}} <span class="politic" style="font-size:12px;text-transform:uppercase" ng-if="candidat.politic">({{candidat.politic}})</span> </a></li>
+          </ul>
+
+        </div>
+
 
       </div>
       <img src="{{shadow_url}}" class="circonscription-shadow-image animated fadeIn"/>
