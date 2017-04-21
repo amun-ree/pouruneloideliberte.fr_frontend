@@ -17,7 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ab-base64',
-  
+
     'angularLoad'
   ])
   .constant("CONFIG", {
