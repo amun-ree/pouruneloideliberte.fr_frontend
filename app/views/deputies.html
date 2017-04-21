@@ -35,7 +35,18 @@
         </div>
         <button class="deputy-info-button animated fadeInDown" ng-click='go()'>ÉCRIRE À VOTRE DÉPUTÉ(E)</button>
       </div>
+      <div class="candidat-interpel nimated fadeIn">
+        <span class="candidat-title" ng-show="candidats != 0">Interpeller les candidats:</span><br/>
+        <ul class="candidat-list">
+          <li ng-repeat="candidat in candidats"><a class="candidat-name" href="mailto:{{candidat.email_address}}?subject=POUR UNE LOI DE LIBERT&eacute; : #Admd2017&Body={{candidat.prefix[0].slug}},%0D%0A%0D%0A
 
+Je soutiens la revendication de l’Association pour le Droit de Mourir dans la Dignit&eacute; (ADMD) en faveur de la l&eacute;galisation de l’aide active &agrave; mourir.%0D%0A%0D%0A
+
+Bien  &agrave; vous,
+&cc=pouruneloideliberte@admd.net">{{candidat.first_name}} {{candidat.last_name}} <span class="politic" style="font-size:12px;text-transform:uppercase" ng-if="candidat.politic">({{candidat.politic}})</span> </a></li>
+        </ul>
+
+      </div>
     </div>
   </div>
 
@@ -64,6 +75,19 @@
 
         </div>
         <button class="deputy-info-button animated fadeInDown center-block" ng-click='go()'>ÉCRIRE À VOTRE DÉPUTÉ(E)</button>
+      </div>
+
+      <div class="candidat-interpel" ng-if="candidats != null">
+        <span class="candidat-title" ng-show="circ.candidat != 0">Interpeller les candidats:</span><br/>
+        <ul class="candidat-list">
+          <li ng-repeat="candidat in candidats"><a class="candidat-name" href="mailto:{{candidat.email_address}}?subject=POUR UNE LOI DE LIBERT&eacute; : #Admd2017&Body={{candidat.prefix[0].slug}},%0D%0A%0D%0A
+
+Je soutiens la revendication de l’Association pour le Droit de Mourir dans la Dignit&eacute; (ADMD) en faveur de la l&eacute;galisation de l’aide active &agrave; mourir.%0D%0A%0D%0A
+
+Bien  &agrave; vous,
+&cc=pouruneloideliberte@admd.net">{{candidat.first_name}} {{candidat.last_name}} <span class="politic" style="font-size:12px;text-transform:uppercase" ng-if="candidat.politic">({{candidat.politic}})</span> </a></li>
+        </ul>
+
       </div>
 
     </div>

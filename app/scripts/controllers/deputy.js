@@ -17,7 +17,8 @@ $scope.opinion_colors = ['red', 'green','bold','bold']
    $scope.getData = function(id) {
        Deputy($scope.deputy_id).success(function(data) {
         $scope.deputy = data.deputy;
-        $scope.circonscription = $scope.deputy.circonscription[0]
+        $scope.circonscription = $scope.deputy.circonscription[0];
+        $scope.candidats = $scope.deputy.circonscription.candidat;
         $scope.departement_id = $scope.deputy.circonscription[0].departement_id;
            Departement($scope.departement_id).success(function(departement_data) {
              $scope.departement = departement_data.departement;
