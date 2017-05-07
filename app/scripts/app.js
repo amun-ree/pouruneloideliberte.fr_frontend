@@ -17,7 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ab-base64',
-
+    'uz.mailto',
     'angularLoad'
   ])
   .constant("CONFIG", {

@@ -48,9 +48,17 @@
           </p>
           <span class="candidat-title" ng-show="circ.candidat != 0">Interpeller les candidats:</span><br/>
           <ul class="candidat-list">
-            <li ng-repeat="candidat in circ.candidat"><a class="candidat-name" href="mailto:{{candidat.email_address}}?subject=POUR UNE LOI DE LIBERT&eacute; : #Admd2017&Body={{candidat.prefix[0].slug}},%0D%0A%0D%0A
+            <li ng-repeat="candidat in circ.candidat | orderBy : 'first_name'"><a class="candidat-name" href="mailto:{{candidat.email_address}}?subject=POUR UNE LOI DE LIBERTÉ : #Admd2017&Body={{candidat.prefix[0].slug}},%0D%0A%0D%0A
 
-  Je soutiens la revendication de l’Association pour le Droit de Mourir dans la Dignit&eacute; (ADMD) en faveur de la l&eacute;galisation de l’aide active &agrave; mourir.%0D%0A%0D%0A
+Savez-vous que 95%25 des Français se déclarent favorables à l’euthanasie ? Et que l’ADMD compte 70 000 membres actifs ? Et que dans votre département, {{departement.singular_name}}, nous sommes  {{departement.nb_admd}} à demander la légalisation de l’aide active à mourir (euthanasie active ou suicide assisté) ?
+%0D%0A%0D%0A
+
+Nous, citoyens, demandons une réponse digne et respectueuse de la volonté des personnes en fin de vie. Moi, électeur de votre circonscription, demande à ce que vous répondiez à ces deux questions :%0D%0A%0D%0A
+
+Ȇtes-vous favorable à l’euthanasie active : administration d’un produit létal par un tiers ?%0D%0A%0D%0A
+Ȇtes-vous favorable au suicide assisté : auto-administration d’un produit létal ?%0D%0A%0D%0A
+
+{{candidat.prefix[0].slug}}, il est temps de choisir les conditions de notre propre fin de vie. J’ai besoin de connaître votre position et de la faire connaître aux électeurs. Je compte sur votre réponse sur un sujet connu de tous et sur lequel un futur législateur se doit d’avoir une position claire.%0D%0A%0D%0A
 
   Bien  &agrave; vous,
   &cc=pouruneloideliberte@admd.net">{{candidat.first_name}} {{candidat.last_name}} <span class="politic" style="font-size:12px;text-transform:uppercase" ng-if="candidat.politic">({{candidat.politic}})</span> </a></li>
